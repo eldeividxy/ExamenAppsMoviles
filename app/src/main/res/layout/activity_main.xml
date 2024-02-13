@@ -7,24 +7,71 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/txtHola"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="HOLA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.39" />
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="16dp"
+        android:text="Convertidor de grados"
+        app:layout_constraintEnd_toEndOf="@+id/etC"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:text="C°"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etC"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="F°"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etF"
+        app:layout_constraintEnd_toStartOf="@+id/etF" />
 
     <Button
-        android:id="@+id/btGenerar"
+        android:id="@+id/btnGC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:text="Generar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtHola" />
+        android:layout_marginStart="81dp"
+        android:text="C°"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnGF"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnGF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="64dp"
+        android:text="F°"
+        app:layout_constraintStart_toEndOf="@+id/btnGC"
+        app:layout_constraintTop_toBottomOf="@+id/etF" />
+
+    <EditText
+        android:id="@+id/etC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/txC"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <EditText
+        android:id="@+id/etF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="@+id/etC"
+        app:layout_constraintTop_toBottomOf="@+id/etC" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
