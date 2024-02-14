@@ -41,7 +41,8 @@ class MainActivity : AppCompatActivity() {
             }
 
             var gradosF=convertirGF(gradosC)
-            val formatted ="%.2f".format(gradosC)
+            val formatted ="%.2f".format(gradosF)
+            cf.setText(formatted)
         }
 
 
